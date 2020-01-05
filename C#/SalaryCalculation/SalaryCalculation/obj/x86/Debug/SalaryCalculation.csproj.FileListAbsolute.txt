@@ -1,0 +1,5 @@
+I:\软件开发\日常练习\SalaryCalculation\SalaryCalculation\bin\Debug\SalaryCalculation.exe
+I:\软件开发\日常练习\SalaryCalculation\SalaryCalculation\bin\Debug\SalaryCalculation.pdb
+I:\软件开发\日常练习\SalaryCalculation\SalaryCalculation\obj\x86\Debug\SalaryCalculation.exe
+I:\软件开发\日常练习\SalaryCalculation\SalaryCalculation\obj\x86\Debug\SalaryCalculation.pdb
+I:\软件开发\日常练习\SalaryCalculation\SalaryCalculation\obj\x86\Debug\SalaryCalculation.csprojResolveAssemblyReference.cache
