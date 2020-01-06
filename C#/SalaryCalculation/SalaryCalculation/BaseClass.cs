@@ -7,13 +7,10 @@ namespace BaseClass
 {
     interface IThing
     {
-        string Type{get;}
+        string Type{get;}                          //接口中的字段
         //打印自生信息
         void TellAboutSelf();
     }
-
-
-
     public abstract class Employee:IThing
     {
         private string name;
@@ -21,7 +18,7 @@ namespace BaseClass
         private DateTime bornDay;
         public float earnings;
         public abstract float Earnings();
-
+        string dt;
         public string Name
         {
             get { return name;}
@@ -33,26 +30,27 @@ namespace BaseClass
             get { return salary; }
             set { salary = value; }
         }
+
         public DateTime BornDay
         {
             get { return bornDay; }
             set { bornDay = value; }
         }
 
-
         //定义构造函数
         public Employee(string name,int year,int m,int d)
         {
-            this.Name = name;
+            this.name = Name;
             this.BornDay = new DateTime(year,m,d);
+            dt = BornDay.ToString("yyyy/MM/dd");
         }
 
         public abstract string Type { get; }
 
         public virtual void TellAboutSelf()
         {
-            Console.WriteLine("姓名：{0}         出生日期：{1}", Name, bornDay);
-            Console.WriteLine("职务：{0}         实发工资：￥{1}",Type ,earnings);
+            Console.WriteLine("姓名：{0}         出生日期：{1}", name, dt);
+            Console.WriteLine("职务：{0}         实发工资：{1,6:c}", Type, earnings);
         }
     }
 
@@ -65,8 +63,6 @@ namespace BaseClass
             : base(Name,year,m,d)
         {
             this.Name = Name;
-            this.BornDay = new DateTime(year, m, d);
-            this.basicSalary = BasicSalary;
             this.bonus = Bonus;
         }
 
